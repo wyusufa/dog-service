@@ -13,7 +13,10 @@
 * create CRUD controller 
   * GET
     * get all breed names 
+      * 
     * get sub breed name by breed name 
+    * get all images by breed
+    * get all images by breed and its sub breed (if have any)
   * POST
   * PUT 
   * DELETE 
