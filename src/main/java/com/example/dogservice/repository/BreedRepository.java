@@ -1,2 +1,7 @@
-package com.example.dogservice.repository;public interface BreedRepository {
+package com.example.dogservice.repository;
+
+import com.example.dogservice.model.entity.Breeds;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface BreedRepository extends JpaRepository<Breeds, Integer> {
 }

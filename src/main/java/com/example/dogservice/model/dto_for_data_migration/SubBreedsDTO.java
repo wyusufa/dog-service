@@ -1,4 +1,4 @@
-package com.example.dogservice.model.dto;
+package com.example.dogservice.model.dto_for_data_migration;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
