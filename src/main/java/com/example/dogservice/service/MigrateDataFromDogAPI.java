@@ -1,4 +1,4 @@
-package com.example.dogservice.runner;
+package com.example.dogservice.service;
 
 import com.example.dogservice.model.dto_for_data_migration.BreedsDTO;
 import com.example.dogservice.model.dto_for_data_migration.DogImagesDTO;
@@ -12,6 +12,7 @@ import com.example.dogservice.repository.SubBreedRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.LinkedHashMap;
@@ -20,9 +21,9 @@ import java.util.List;
 /***
  * migrate data from dog api to H2 database
  */
-@Component
+@Service
 @Slf4j
-public class MigrateDataFromDogAPI implements CommandLineRunner {
+public class MigrateDataFromDogAPI  {
 
     private final RestTemplate restTemplate;
     private final BreedRepository breedRepository;
@@ -36,8 +37,7 @@ public class MigrateDataFromDogAPI implements CommandLineRunner {
         this.dogImageRepository = dogImageRepository;
     }
 
-    @Override
-    public void run(String... args) throws Exception {
+    public void run()  {
         log.info("data migration from Dog API to H2 DB start");
         log.info("please wait...");
         migrateDataFromDogAPItoDB();

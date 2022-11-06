@@ -22,5 +22,8 @@
   * DELETE 
 
 
-# later
-* unit test 
+# later (jika waktu cukup)
+* perjelas message 
+* delete dan put sebaiknya by name bukan id 
+* return all breed termasuk dengan sub breed jika breed memiliki sub breed 
+* 
